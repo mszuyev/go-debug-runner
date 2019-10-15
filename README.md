@@ -1,5 +1,5 @@
 # go-debug-runner
-repo for docker image
+repo for docker image. Supports "dep" package manager.
 
 ### how to run
 
