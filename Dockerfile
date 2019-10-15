@@ -1,9 +1,10 @@
-FROM golang:1.12-alpine
+FROM golang:1.13-alpine
 ENV CGO_ENABLED 0
+ENV GO111MODULE=on
+ENV GOPROXY=direct
+ENV GOSUMDB=off
 RUN apk update \
-    && apk add --no-cache dep bash mc git build-base libc6-compat vim \ 
-    && mkdir /.cache \ 
-    && chmod -R a+rw /.cache \ 
+    && apk add --no-cache bash mc git build-base libc6-compat vim \ 
     && go get -u github.com/go-delve/delve/cmd/dlv \
     && mkdir -p ~/.config/dlv \
     && echo "aliases: {}" >  ~/.config/dlv/config.yml \

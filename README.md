@@ -1,5 +1,5 @@
 # go-debug-runner
-repo for docker image. Supports "dep" package manager.
+Repo for docker image to run golang of version 1.13. Does not support "dep" package manager anymore.
 
 ### how to run
 
@@ -13,5 +13,5 @@ docker container run \
     --security-opt="apparmor=unconfined" \
     --cap-add=SYS_PTRACE \
     --name $CONTAINER_NAME \
-    -it mszuyev/go-debug-runner:1.12 /bin/sh
+    -it mszuyev/go-debug-runner:1.13 /bin/sh
 ```
