@@ -1,8 +1,8 @@
 FROM golang:1.13-alpine
 ENV CGO_ENABLED 0
-ENV GO111MODULE=on
-ENV GOPROXY=direct
-ENV GOSUMDB=off
+ENV GO111MODULE on
+ENV GOPROXY direct
+ENV GOSUMDB off
 RUN apk update \
     && apk add --no-cache bash mc git build-base libc6-compat vim \ 
     && go get -u github.com/go-delve/delve/cmd/dlv \
