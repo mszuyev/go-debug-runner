@@ -1,6 +1,5 @@
 FROM golang:1.12-alpine
 ENV CGO_ENABLED 0
-ENV GO111MODULE on
 RUN apk update \
     && apk add --no-cache dep bash mc git build-base libc6-compat vim \ 
     && mkdir /.cache \ 
