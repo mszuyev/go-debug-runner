@@ -4,7 +4,7 @@ ENV GO111MODULE on
 ENV GOPROXY direct
 ENV GOSUMDB off
 RUN apk update \
-    && apk add --no-cache bash mc git build-base libc6-compat vim \ 
+    && apk add --no-cache bash mc git build-base libc6-compat vim openssh \ 
     && go get -u github.com/go-delve/delve/cmd/dlv \
     && mkdir -p ~/.config/dlv \
     && echo "aliases: {}" >  ~/.config/dlv/config.yml \
